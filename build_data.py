@@ -20,7 +20,7 @@ COLOR_MAP = {
     'Reed Coller': '#fcdb03',
     'Lachlan Farrugia': '#5cf046',
     'Daniel Monitto': '#fcd04c',
-    'Riley Huxtable': '#a33636',
+    'Riley Huxtable': '#e36868',
     'Austin Thorney-Croft': '#5364b0',
     'Jude Milburn': '#db4040',
     'James Norrish': '#5ed694',
