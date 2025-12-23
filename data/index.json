@@ -1,0 +1,137 @@
+{
+  "seasons": [
+    "8",
+    "7",
+    "6",
+    "5"
+  ],
+  "seasonGames": {
+    "8": [
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "7": [
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "6": [
+      18,
+      17,
+      16,
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "5": [
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  "seasonTeams": {
+    "8": [
+      "LIGHTNING 1",
+      "LIGHTNING 2",
+      "LIGHTNING 3",
+      "MAGIC 1",
+      "MAGIC 2"
+    ],
+    "7": [
+      "LIGHTNING 1",
+      "LIGHTNING 2",
+      "LIGHTNING 3",
+      "MAGIC 1",
+      "MAGIC 2",
+      "SAINTS"
+    ],
+    "6": [
+      "LIGHTNING 1",
+      "MAGIC 1",
+      "SAINTS"
+    ],
+    "5": [
+      "MAGIC 1",
+      "MAGIC 2",
+      "MAGIC 3",
+      "MAGIC 4",
+      "SAINTS"
+    ]
+  },
+  "oppColors": {
+    "MAGIC 1": "#3399FF",
+    "MAGIC 2": "#3399FF",
+    "MAGIC 3": "#3399FF",
+    "MAGIC 4": "#3399FF",
+    "LIGHTNING 1": "#F9CB49",
+    "LIGHTNING 2": "#F9CB49",
+    "LIGHTNING 3": "#F9CB49",
+    "PANTHERS 3": "#000000",
+    "PANTHERS 2": "#000000",
+    "SAINTS": "#9A009A"
+  },
+  "defaultOppColor": "#6C757D",
+  "rowColors": {
+    "Lachlan Farley": "#FF99CC",
+    "Josh Huxtable": "#428a36",
+    "Darcy Bishop": "#99FF66",
+    "Harry Coller": "#5f99f5",
+    "Adam Blain": "#be60f7",
+    "Reed Coller": "#fcdb03",
+    "Lachlan Farrugia": "#5cf046",
+    "Daniel Monitto": "#fcd04c",
+    "Riley Huxtable": "#a33636",
+    "Austin Thorney-Croft": "#5364b0",
+    "Jude Milburn": "#db4040",
+    "James Norrish": "#5ed694",
+    "Liam Brown": "#b76bf2",
+    "Panthers": "#f07c29"
+  }
+}

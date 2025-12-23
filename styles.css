@@ -1,0 +1,324 @@
+:root{
+  --bg:#07070a;
+  --panel:#0c0d12;
+  --panel2:#0f1119;
+  --line:rgba(255,255,255,0.10);
+  --text:#f5f5f5;
+  --muted:rgba(255,255,255,0.70);
+
+  --red:#b50728;     /* team red */
+  --red2:#db2e2e;    /* brighter accent */
+  --black:#0a0a0a;
+  --white:#ffffff;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background:
+    radial-gradient(1200px 600px at 15% 0%, rgba(240,124,41,0.28), rgba(0,0,0,0) 55%),
+    radial-gradient(900px 500px at 85% 10%, rgba(240,124,41,0.18), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, #070a10, #0b0f17);
+  color:var(--text);
+}
+
+
+.container{
+  width:80%;
+  max-width:80%;
+  margin:0 auto;
+  padding:18px 18px 26px;
+}
+
+@media (max-width: 980px){
+  .container{ width:94%; max-width:94%; }
+}
+
+/* ===== header ===== */
+.header{
+  position:relative;
+  border-radius:18px;
+  padding:16px;
+  margin-top:14px;
+
+  background:
+    linear-gradient(135deg, rgba(240,124,41,0.28), rgba(0,0,0,0) 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border:1px solid var(--line);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+  overflow:hidden;
+}
+
+.header::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    linear-gradient(90deg, rgba(240,124,41,0.28), rgba(151, 73, 28, 0.48), rgba(240,124,41,0.28));
+  filter: blur(20px);
+  opacity:0.55;
+  pointer-events:none;
+}
+
+.brand{ position:relative; z-index:1; }
+
+.brand-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo{
+  height:65px;
+  width:auto;
+  object-fit:contain;
+  background-color:#000000;   /* black background */
+  padding:8px;                /* space around logo */
+  border-radius:5px;         /* optional */
+}
+
+
+.brand-text h1{
+  margin:0;
+  font-size:26px;
+  letter-spacing:0.4px;
+  text-transform:none;
+}
+
+.subtitle{
+  margin:6px 0 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ===== tabs ===== */
+.tabs{
+  position:relative;
+  z-index:1;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
+.tabs button{
+  border:1px solid rgba(255,255,255,0.12);
+  background:rgba(10,10,12,0.70);
+  color:var(--text);
+  padding:9px 11px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:750;
+  letter-spacing:0.2px;
+  text-transform:none;
+}
+
+.tabs button:hover{
+  border-color:rgba(255,255,255,0.20);
+  transform: translateY(-1px);
+}
+
+.tabs button.active{
+  border-color: rgba(240,124,41,0.28);
+  background:
+    linear-gradient(180deg, rgba(240,124,41,0.28), rgba(10,10,12,0.55));
+  box-shadow: 0 0 0 2px rgba(240,124,41,0.28) inset;
+}
+
+/* ===== panel ===== */
+.panel{
+  margin-top:14px;
+  background: rgba(15,17,25,0.72);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px;
+  box-shadow: 0 16px 44px rgba(0,0,0,0.50);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== controls ===== */
+.controls{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.control{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(10,10,12,0.55);
+}
+
+.control label{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:700;
+  text-transform:none;
+}
+
+.control select,
+.control input{
+  background:rgba(0,0,0,0.45);
+  color:var(--text);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:12px;
+  padding:8px 10px;
+  outline:none;
+}
+
+.control select:focus,
+.control input:focus{
+  border-color:rgba(240,124,41,0.28);
+  box-shadow:0 0 0 2px rgba(255, 124, 31, 0.18);
+}
+
+/* ===== score cards ===== */
+.cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  justify-content:center;
+  gap:18px;
+  margin:16px 0 20px;
+  align-items:stretch;
+}
+@media (max-width: 700px){
+  .cards{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .card{
+    width:100%;
+    max-width:320px;
+  }
+}
+
+
+
+.card{
+  border-radius:18px;
+  padding:18px 16px;
+  border:1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  align-items:center;
+  text-align:center;
+}
+
+
+/* team name */
+.card .title{
+  font-size:14px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  opacity:0.9;
+}
+
+/* score number */
+.card .score{
+  font-size:46px;
+  font-weight:900;
+  line-height:1;
+}
+
+/* team score card */
+.team-card{
+  background: #f07c29;
+  color: white;
+}
+
+
+/* ===== tables ===== */
+.table-wrap{
+  width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.35);
+}
+
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  table-layout:auto;
+}
+
+table,
+thead th,
+tbody td {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+
+thead th{
+  position:sticky;
+  top:0;
+  z-index:2;
+  padding:11px 10px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  color:rgba(255,255,255,0.92);
+
+  background:
+    linear-gradient(180deg, rgba(240,124,41,0.28), rgba(15,17,25,0.92));
+  border-bottom:1px solid rgba(255,255,255,0.14);
+  white-space:nowrap;
+}
+
+tbody td{
+  padding:10px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  text-align:center;
+  color:#000000; /* keep black text on your coloured rows */
+  font-weight:800;
+  white-space:nowrap;
+}
+
+tbody tr:hover td{
+  filter:brightness(0.96);
+}
+
+/* optional: make first column a bit bolder */
+tbody td:first-child{
+  font-weight:950;
+}
+
+/* ===== misc ===== */
+.note{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:10px;
+}
+
+.footer{
+  margin-top:14px;
+  text-align:center;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+/* FORCE new font for all table content */
+.table-wrap table,
+.table-wrap thead th,
+.table-wrap tbody td {
+  font-family: "IBM Plex Sans", Arial, sans-serif !important;
+  font-variant-numeric: tabular-nums;
+}
